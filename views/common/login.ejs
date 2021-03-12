@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../common/header.ejs')%>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('navigation.ejs')%>
+    <form method="POST">
+        <h1>Login Page</h1>
+        <div>
+            <label for="email">E-Mail : </label>
+            <input type ="text" name ="email" placeholder ="enter email">
+        </div>
+        <br>
+        <div>
+            <label for="email">password : </label>
+            <input type ="password" name ="password" placeholder ="enter password">
+        </div>
+   <br>
+        <label>Login as</label>
+        <br>
+   
+<input type="radio" id="admin" name="roles" value="admin">
+<label for="admin">Admin</label>
+<input type="radio" id="user" name="roles" value="user">
+<label for="user">User</label>
+<br>
+<br>
+<div>
+    <button type="submit">login</button>
+</div>
+    </form>
+</body>
+<main>
+    <% if (errorMessage) { %>
+        <div class=<%= errorMessage %></div>
+        <% } %>
+</main>
+</html>
